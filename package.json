@@ -1,0 +1,48 @@
+{
+    "name": "energomonitor",
+    "version": "1.0.0",
+    "description": "Energomonitor API JavaScript client",
+    "keywords": [
+        "energomonitor",
+        "api",
+        "client"
+    ],
+    "homepage": "https://github.com/energomonitor/energomonitor-js",
+    "bugs": "https://github.com/energomonitor/energomonitor-js/issues",
+    "license": "MIT",
+    "author": "Michaela Robošová <michaela.robosova@energomonitor.cz>",
+    "contributors": [
+        "David Majda <david.majda@energomonitor.cz>"
+    ],
+    "files": [
+        "__tests__",
+        "src",
+        "index.js"
+    ],
+    "repository": "energomonitor/energomonitor-js",
+    "scripts": {
+        "format": "prettier-eslint --write \"{__tests__,src}/**/*.js\"",
+        "test": "jest",
+        "test-coverage": "jest --coverage",
+        "test-verbose": "jest --verbose",
+        "doc": "jsdoc2md src/Energomonitor.js"
+    },
+    "dependencies": {
+        "axios": "^0.16.2",
+        "qs": "^6.5.1"
+    },
+    "devDependencies": {
+        "axios-mock-adapter": "^1.10.0",
+        "jest": "^21.2.1",
+        "jsdoc-to-markdown": "^3.0.2",
+        "prettier": "^1.9.2",
+        "prettier-eslint": "^8.3.1",
+        "prettier-eslint-cli": "^4.6.1"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    }
+}

@@ -1,0 +1,158 @@
+{
+    "authorization": {
+        "id": 123456,
+        "user_id": "uscdb",
+        "token": "test-123456789",
+        "note": "This is my testing token",
+        "resources": [
+            {
+                "type": "feed",
+                "name": "200242",
+                "permissions": ["r"]
+            }
+        ],
+        "last_used_at": null,
+        "expires_at": "2017-03-01T12:30:00+00:00"
+    },
+    "feeds": [
+        {
+            "id": "200242",
+            "subscription": {
+                "from": "2015-12-01T10:13:19.659004+00:00",
+                "to": "2016-12-01T10:13:19.659004+00:00"
+            },
+            "configs": [
+                {
+                    "title": "Energomonitor HQ",
+                    "timezone": "Europe/Prague",
+                    "valid_from": "2000-01-01T00:00:00+00:00",
+                    "valid_to": null
+                }
+            ]
+        },
+        {
+            "id": "123456",
+            "subscription": {
+                "from": "2016-12-01T10:13:19.659004+00:00",
+                "to": "2017-12-01T10:13:19.659004+00:00"
+            },
+            "configs": [
+                {
+                    "title": "Home",
+                    "timezone": "Europe/Prague",
+                    "valid_from": "2000-01-01T00:00:00+00:00",
+                    "valid_to": null
+                }
+            ]
+        }
+    ],
+    "notifications": [
+        {
+            "id": 64810,
+            "title": "'Energomonitor HQ' homebase doesn't send data.",
+            "content":
+                "We just found out that your Homebase is not connected to our servers.",
+            "feed_title": "Energomonitor HQ",
+            "created_at": "2017-04-13T08:32:16+00:00",
+            "read": true,
+            "archived": false
+        },
+        {
+            "id": 55555,
+            "title": "'Home' homebase doesn't send data.",
+            "content":
+                "We just found out that your Homebase is not connected to our servers.",
+            "feed_title": "Home",
+            "created_at": "2016-04-13T08:32:16+00:00",
+            "read": false,
+            "archived": false
+        }
+    ],
+    "streams": [
+        {
+            "id": "embnos",
+            "type": "processed",
+            "channel": 4,
+            "configs": [
+                {
+                    "title": "Electricity - Fridge",
+                    "medium": "power",
+                    "unit": "W",
+                    "valid_from": "2000-01-01T00:00:00+00:00",
+                    "valid_to": null
+                }
+            ]
+        },
+        {
+            "id": "embvko",
+            "type": "raw",
+            "channel": 16,
+            "device": 8,
+            "medium": 16
+        },
+        {
+            "id": "embvkt",
+            "type": "system",
+            "channel": 16
+        }
+    ],
+    "feed": {
+        "id": "200242",
+        "subscription": {
+            "from": "2015-12-01T10:13:19.659004+00:00",
+            "to": "2016-12-01T10:13:19.659004+00:00"
+        },
+        "configs": [
+            {
+                "title": "Energomonitor HQ",
+                "timezone": "Europe/Prague",
+                "valid_from": "2000-01-01T00:00:00+00:00",
+                "valid_to": null
+            }
+        ]
+    },
+    "notification": {
+        "id": 64810,
+        "title": "'Energomonitor HQ' homebase doesn't send data.",
+        "content":
+            "We just found out that your Homebase is not connected to our servers.",
+        "feed_title": "Energomonitor HQ",
+        "created_at": "2017-04-13T08:32:16+00:00",
+        "read": true,
+        "archived": false
+    },
+    "notificationCount": {
+        "read": 170,
+        "unread": 2,
+        "total": 172
+    },
+    "relatedStreams": [
+        ["embmog", "embmoh", "embmoi"],
+        ["emiwm", "emiwu", "emixk"]
+    ],
+    "stream": {
+        "id": "embnos",
+        "type": "processed",
+        "channel": 4,
+        "configs": [
+            {
+                "title": "Electricity - Fridge",
+                "medium": "power",
+                "unit": "W",
+                "valid_from": "2000-01-01T00:00:00+00:00",
+                "valid_to": null
+            }
+        ]
+    },
+    "streamData": [
+        [1496066670, 57],
+        [1496066760, 56.94],
+        [1496066850, 56.53],
+        [1496066940, 56.2]
+    ],
+    "user": {
+        "id": "usfgw",
+        "username": "dmajda",
+        "email": "david.majda@energomonitor.cz"
+    }
+}
