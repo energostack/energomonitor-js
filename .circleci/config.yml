@@ -18,7 +18,7 @@ jobs:
             - node_modules
           key: v1-node-modules-node-8{{ checksum "package-lock.json" }}
       - run:
-          name: Check formatting
+          name: Check code formatting
           command: npm run format-check
       - run:
           name: Run tests
@@ -41,7 +41,7 @@ jobs:
             - node_modules
           key: v1-node-modules-node-9{{ checksum "package-lock.json" }}
       - run:
-          name: Check formatting
+          name: Check code formatting
           command: npm run format-check
       - run:
           name: Run tests
