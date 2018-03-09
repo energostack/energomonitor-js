@@ -4,7 +4,6 @@ jobs:
   build-node-8:
     docker:
       - image: circleci/node:8
-    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
@@ -22,7 +21,6 @@ jobs:
   build-node-9:
     docker:
       - image: circleci/node:9
-    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
