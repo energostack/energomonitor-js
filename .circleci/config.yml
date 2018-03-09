@@ -10,13 +10,19 @@ jobs:
           keys:
           - v1-node-modules-node-8{{ checksum "package-lock.json" }}
           - v1-node-modules-node-8
-      - run: npm install
+      - run:
+          name: Install dependencies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-node-modules-node-8{{ checksum "package-lock.json" }}
-      - run: npm run format-check
-      - run: npm run test
+      - run:
+          name: Check formatting
+          command: npm run format-check
+      - run:
+          name: Run tests
+          command: npm run test
 
   build-node-9:
     docker:
@@ -27,13 +33,19 @@ jobs:
           keys:
           - v1-node-modules-node-9{{ checksum "package-lock.json" }}
           - v1-node-modules-node-9
-      - run: npm install
+      - run:
+          name: Install dependencies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-node-modules-node-9{{ checksum "package-lock.json" }}
-      - run: npm run format-check
-      - run: npm run test
+      - run:
+          name: Check formatting
+          command: npm run format-check
+      - run:
+          name: Run tests
+          command: npm run test
 
 workflows:
   version: 2
