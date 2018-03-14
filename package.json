@@ -23,6 +23,7 @@
     "scripts": {
         "format": "prettier --write \"{__tests__,src}/**/*.js\"",
         "format-check": "prettier --list-different \"{__tests__,src}/**/*.js\"",
+        "lint": "eslint \"{__tests__,src}/**/*.js\"",
         "test": "jest",
         "test-coverage": "jest --coverage",
         "test-verbose": "jest --verbose",
@@ -30,6 +31,8 @@
     },
     "dependencies": {
         "axios": "^0.16.2",
+        "eslint": "^4.18.2",
+        "eslint-config-prettier": "^2.9.0",
         "qs": "^6.5.1"
     },
     "devDependencies": {
