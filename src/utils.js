@@ -5,10 +5,10 @@
  * @return {Object} A request headers object.
  */
 function buildAuthorizedRequestHeaders(token) {
-    return {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`
-    };
+  return {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${token}`
+  };
 }
 
 /**
@@ -18,7 +18,7 @@ function buildAuthorizedRequestHeaders(token) {
  * @return {integer} The date as a Unix timestamp.
  */
 function dateToTimestamp(date) {
-    return Math.round(date.getTime() / 1000);
+  return Math.round(date.getTime() / 1000);
 }
 
 /**
@@ -30,17 +30,17 @@ function dateToTimestamp(date) {
  * @return {*} A rejected promise or result of the function.
  */
 function authorizedApiRequest(token, f) {
-    if (token === undefined) {
-        return Promise.reject(
-            'Cannot call this method without setting the authorization token ' +
-                '(in the constructor or using the authorize method).'
-        );
-    }
-    return f();
+  if (token === undefined) {
+    return Promise.reject(
+      'Cannot call this method without setting the authorization token ' +
+        '(in the constructor or using the authorize method).'
+    );
+  }
+  return f();
 }
 
 module.exports = {
-    buildAuthorizedRequestHeaders,
-    dateToTimestamp,
-    authorizedApiRequest
+  buildAuthorizedRequestHeaders,
+  dateToTimestamp,
+  authorizedApiRequest
 };

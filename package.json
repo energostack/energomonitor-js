@@ -21,8 +21,8 @@
     ],
     "repository": "energomonitor/energomonitor-js",
     "scripts": {
-        "format": "prettier-eslint --write \"{__tests__,src}/**/*.js\"",
-        "format-check": "prettier-eslint --list-different \"{__tests__,src}/**/*.js\"",
+        "format": "prettier --write \"{__tests__,src}/**/*.js\"",
+        "format-check": "prettier --list-different \"{__tests__,src}/**/*.js\"",
         "test": "jest",
         "test-coverage": "jest --coverage",
         "test-verbose": "jest --verbose",
@@ -36,9 +36,7 @@
         "axios-mock-adapter": "^1.13.1",
         "jest": "^21.2.1",
         "jsdoc-to-markdown": "^3.0.4",
-        "prettier": "^1.10.2",
-        "prettier-eslint": "^8.8.1",
-        "prettier-eslint-cli": "^4.7.0"
+        "prettier": "^1.10.2"
     },
     "engines": {
         "node": ">=8"
