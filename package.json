@@ -21,9 +21,9 @@
     ],
     "repository": "energomonitor/energomonitor-js",
     "scripts": {
-        "format": "prettier --write \"{src,__tests__}/**/*.js\"",
-        "format-check": "prettier --list-different \"{src,__tests__}/**/*.js\"",
-        "lint": "eslint \"{src,__tests__}/**/*.js\"",
+        "format": "prettier --write '{src,__tests__}/**/*.js'",
+        "format-check": "prettier --list-different '{src,__tests__}/**/*.js'",
+        "lint": "eslint '{src,__tests__}/**/*.js'",
         "test": "jest",
         "test-coverage": "jest --coverage",
         "test-verbose": "jest --verbose",
