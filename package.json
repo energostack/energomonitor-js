@@ -1,50 +1,50 @@
 {
-    "name": "energomonitor",
-    "version": "1.0.0",
-    "description": "Energomonitor API JavaScript client",
-    "keywords": [
-        "energomonitor",
-        "api",
-        "client"
-    ],
-    "homepage": "https://github.com/energomonitor/energomonitor-js",
-    "bugs": "https://github.com/energomonitor/energomonitor-js/issues",
-    "license": "MIT",
-    "author": "Michaela Robošová <michaela.robosova@energomonitor.cz>",
-    "contributors": [
-        "David Majda <david.majda@energomonitor.cz>"
-    ],
-    "files": [
-        "__tests__",
-        "index.js",
-        "src"
-    ],
-    "repository": "energomonitor/energomonitor-js",
-    "scripts": {
-        "format": "prettier --write '{src,__tests__}/**/*.js'",
-        "format-check": "prettier --list-different '{src,__tests__}/**/*.js'",
-        "lint": "eslint '{src,__tests__}/**/*.js'",
-        "test": "jest",
-        "test-coverage": "jest --coverage",
-        "test-verbose": "jest --verbose",
-        "doc": "jsdoc2md src/Energomonitor.js"
-    },
-    "dependencies": {
-        "axios": "^0.16.2",
-        "qs": "^6.5.1"
-    },
-    "devDependencies": {
-        "axios-mock-adapter": "^1.13.1",
-        "eslint": "^4.18.2",
-        "eslint-config-prettier": "^2.9.0",
-        "jest": "^21.2.1",
-        "jsdoc-to-markdown": "^3.0.4",
-        "prettier": "^1.10.2"
-    },
-    "engines": {
-        "node": ">=8"
-    },
-    "jest": {
-        "testEnvironment": "node"
-    }
+  "name": "energomonitor",
+  "version": "1.0.0",
+  "description": "Energomonitor API JavaScript client",
+  "keywords": [
+    "energomonitor",
+    "api",
+    "client"
+  ],
+  "homepage": "https://github.com/energomonitor/energomonitor-js",
+  "bugs": "https://github.com/energomonitor/energomonitor-js/issues",
+  "license": "MIT",
+  "author": "Michaela Robošová <michaela.robosova@energomonitor.cz>",
+  "contributors": [
+    "David Majda <david.majda@energomonitor.cz>"
+  ],
+  "files": [
+    "__tests__",
+    "index.js",
+    "src"
+  ],
+  "repository": "energomonitor/energomonitor-js",
+  "scripts": {
+    "format": "prettier --write '{src,__tests__}/**/*.js'",
+    "format-check": "prettier --list-different '{src,__tests__}/**/*.js'",
+    "lint": "eslint '{src,__tests__}/**/*.js'",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "test-verbose": "jest --verbose",
+    "doc": "jsdoc2md src/Energomonitor.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "qs": "^6.5.1"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.13.1",
+    "eslint": "^4.18.2",
+    "eslint-config-prettier": "^2.9.0",
+    "jest": "^21.2.1",
+    "jsdoc-to-markdown": "^3.0.4",
+    "prettier": "^1.10.2"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
