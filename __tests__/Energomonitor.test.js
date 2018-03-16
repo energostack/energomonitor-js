@@ -143,7 +143,7 @@ describe('Energomonitor', () => {
     });
 
     it('saves token to token request headers after successful auth', async () => {
-      axiosMock.onPost('/authorizations').reply(function(config) {
+      axiosMock.onPost('/authorizations').reply(function() {
         return [200, mockData.authorization];
       });
 
