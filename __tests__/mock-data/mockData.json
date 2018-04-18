@@ -73,6 +73,7 @@
             "id": "embnos",
             "type": "processed",
             "channel": 4,
+            "combined": false,
             "configs": [
                 {
                     "title": "Electricity - Fridge",
@@ -134,6 +135,7 @@
         "id": "embnos",
         "type": "processed",
         "channel": 4,
+        "combined": false,
         "configs": [
             {
                 "title": "Electricity - Fridge",
