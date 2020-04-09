@@ -17,13 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-node-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }}
+      - name: Install dependencies
+        if: matrix.node-version != '9'
+        run: npm ci
 
       - name: Install dependencies
+        if: matrix.node-version == '9'
         run: npm install
 
       - name: Check code formatting
