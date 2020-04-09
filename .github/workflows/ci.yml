@@ -2,14 +2,17 @@ name: CI
 on: push
 
 jobs:
-  build-node-8:
-    name: Build with Node.js 8
+  build:
+    name: Build with Node.js ${{ matrix.node-version }}
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['8', '9']
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '8'
+          node-version: ${{ matrix.node-version }}
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -18,37 +21,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: ${{ runner.os }}-node-modules-node-8-${{ hashFiles('package-lock.json') }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Check code formatting
-        run: npm run format-check
-
-      - name: Lint code
-        run: npm run lint
-
-      - name: Run tests
-        run: npm run test
-
-  build-node-9:
-    name: Build with Node.js 9
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '9'
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-modules-node-9-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-node-modules-node-${{ matrix.node-version }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
         run: npm install
