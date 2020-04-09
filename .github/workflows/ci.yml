@@ -17,11 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Install dependencies (npm ci)
         if: matrix.node-version != '9'
         run: npm ci
 
-      - name: Install dependencies
+      - name: Install dependencies (npm install)
         if: matrix.node-version == '9'
         run: npm install
 
